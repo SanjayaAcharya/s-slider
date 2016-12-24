@@ -1,0 +1,131 @@
+
+.sslider{
+	position:relative;
+	height:0;
+	}
+.img_viewport{
+	overflow:hidden;
+	position:relative;
+	}
+.img_viewport > ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+	white-space:nowrap;
+	position:relative;
+	overflow:hidden;
+	}
+.img_viewport > ul:after{
+	content:'';
+	display:block;
+	clear:both;
+	height:0;
+	visibility:hidden;
+	}
+.img_viewport > ul > li{
+	margin:0;
+	padding:0;
+	display:block;
+	float:left;
+	}
+.img_viewport > ul > li._current{
+	
+	}
+.img_viewport > ul > li img{
+	display:block;
+	max-width:100%;
+	height:365px;
+	}
+.sslider.loading .img_viewport > ul > li img{
+	display:none;
+	}	
+.sslider.loading .thumb_viewport{
+	display:none;
+	}	
+.slider_nav {
+	margin:0;
+	padding:0;
+	border:none;
+	outline:none;
+	border-radius:0;
+	position:absolute;
+	z-index:1;
+	top:0;
+	bottom:0;
+	width:50%;
+	background:rgba(255,255,255,0.7) center center no-repeat;	
+	cursor:pointer;
+	
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	}
+.slider_nav.sslider_go_prev {
+	left:0;
+	background-image:url(../images/arrow_left.png);
+	
+	}
+.slider_nav.sslider_go_next {
+	right:0;
+	background-image:url(../images/arrow_right.png);
+	}
+	
+.thumb_viewport{
+	overflow:hidden;
+	}
+.thumb_viewport ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+	font-size:0;
+	position:relative;
+	}
+.thumb_viewport ul li{
+	margin:0;
+	padding:0;
+	display:inline-block;
+	width:50px;
+	height:50px;
+	overflow:hidden;
+	position:relative;
+	cursor:pointer;
+	}
+.thumb_viewport ul li:after{
+	content:'';
+	position:absolute;
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	box-shadow:0 0 25px 5px rgba(0,0,0,0.9) inset;
+	}
+.thumb_viewport ul li._current{
+	
+	}
+.thumb_viewport ul li._current:after{
+	display:none;
+	}
+.thumb_viewport ul li img{
+	margin:0;
+	padding:0;
+	display:block;
+	min-width:100%;
+	width:auto;
+	height:100%;
+	cursor:pointer;
+	}
+	
+.thumb_viewport._2 ul li:after{
+	display:none;
+	}
+.thumb_viewport._2 ul li._current:after{
+	content:'';
+	display:block;
+	position:absolute;
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	box-shadow:0 0 0px 2px rgba(255,255,255,0.9) inset;
+	}
